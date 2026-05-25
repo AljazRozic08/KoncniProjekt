@@ -4,25 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Evidenca treningov</title>
-    <link rel="stylesheet" href="stil.css" />
+    <link rel="stylesheet" href="prijava.css" />
   </head>
   <body>
-    <form method="post" action="registracija.php">
-      <label>Ime</label><input type="text" name="ime" placeholder="Ime" /><br />
-      <label>Priimek</label
-      ><input type="text" name="priimek" placeholder="Priimek" /><br />
-      <label>Email</label
-      ><input type="email" name="email" placeholder="Email" /><br />
-      <label>Datum rojstva</label
-      ><input type="date" name="datum_rojstva" /><br />
-      <label>Višina</label
-      ><input type="number" name="visina" min="100" max="250" /><br />
-      <label>Teža</label
-      ><input type="number" name="teza" min="1" max="240" /><br />
-      <label>Geslo</label
-      ><input type="password" name="geslo" placeholder="Geslo" /><br />
+    <div class="container">
+      <form method="post" action="registracija.php">
+        <h1>Registracija</h1>
+        <input type="text" name="ime" placeholder="Ime" />
+        <input type="text" name="priimek" placeholder="Priimek" />
+        <input type="email" name="email" placeholder="Email" />
+        <input type="date" name="datum_rojstva" />
+        <input type="number" name="visina" min="100" max="250" />
+        <input type="number" name="teza" min="1" max="240" />
+        <input type="password" name="geslo" />
+        <button type="submit">Potrditev</button>
 
-      <button type="submit">Potrditev</button>
-    </form>
+        <p>Že imaš račun?</p>
+        <a href="prijava.html">Prijava</a>
+      </form>
+    </div>
   </body>
 </html>
