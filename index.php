@@ -12,10 +12,10 @@
     <title>Evidenca treningov</title>
 
     
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="stil.css">
 
 </head>
-<body>
+<body class="index-body">
 
     
      <nav>
@@ -58,11 +58,11 @@
             
         <div class="nav-buttons">
 
-        <a href="prijava.html" class="login-btn">
+        <a href="prijava.html" class="login-register-btn">
             Prijava
         </a>
 
-        <a href="registracija.html" class="register-btn">
+        <a href="registracija.html" class="login-register-btn">
             Registracija
         </a>
 

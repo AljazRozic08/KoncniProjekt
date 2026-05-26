@@ -1,4 +1,5 @@
 <?php
+    
 	include 'conn.php';
     if (isset($_POST['email']) && isset($_POST['geslo'])) 
     {
@@ -11,9 +12,9 @@
         if($st===1){
             $row=mysqli_fetch_array($result);
             $_SESSION['id']= $row['id'];
-            $_SESSION['ime']=$row['ime'];
+            $_SESSION['ime']= $row['ime'];
             
-            header("Location: glavna.html");
+            header("Location: pregled.php");
         }
         else{
             header("Refresh:3; url=prijava.php");

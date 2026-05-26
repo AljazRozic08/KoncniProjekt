@@ -1,0 +1,336 @@
+.index-body {
+  background-image: url(slike/novo.png);
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+
+  min-height: 100vh;
+}
+.logo img {
+  height: 70px;
+}
+
+nav {
+  width: 100%;
+
+  height: 80px;
+
+  background-color: #4e72c2;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 0 40px;
+}
+
+.logo {
+  color: white;
+
+  font-size: 24px;
+
+  font-weight: bold;
+}
+
+main {
+  width: 100%;
+
+  height: calc(100vh - 80px);
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 30px;
+}
+
+.main-box {
+  max-width: 800px;
+
+  background-color: #4e72c2;
+
+  padding: 60px;
+
+  border-radius: 20px;
+
+  text-align: center;
+}
+
+.main-box h1 {
+  font-size: 50px;
+
+  color: #dbdbdb;
+
+  margin-bottom: 15px;
+}
+
+.main-box h2 {
+  font-size: 28px;
+
+  color: rgb(228, 228, 231);
+
+  margin-bottom: 25px;
+}
+
+.main-box p {
+  font-size: 18px;
+
+  color: #fafafa;
+
+  margin-bottom: 35px;
+}
+
+.login-register-btn {
+  display: inline-block;
+
+  padding: 14px 35px;
+
+  background-color: rgb(0, 183, 255);
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 12px;
+}
+
+.login-register-btn:hover {
+  background-color: rgb(68, 0, 255);
+
+  color: white;
+}
+
+/*prijava - Login*/
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: Arial, sans-serif;
+}
+
+.prijava-body {
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background-image: url("slike/glavno.png");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-attachment: fixed;
+}
+
+.obl {
+  width: 400px;
+
+  background: rgba(8, 53, 121, 0.75);
+
+  padding: 40px;
+
+  border-radius: 20px;
+}
+
+h1 {
+  color: white;
+
+  text-align: center;
+
+  margin-bottom: 30px;
+
+  font-size: 35px;
+}
+
+input {
+  width: 100%;
+
+  padding: 14px;
+
+  margin-bottom: 15px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #00a2ff;
+
+  color: white;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0077cc;
+}
+
+p {
+  color: white;
+
+  text-align: center;
+
+  margin-top: 20px;
+}
+
+a {
+  display: block;
+
+  text-align: center;
+
+  margin-top: 10px;
+
+  color: #00a2ff;
+
+  text-decoration: none;
+}
+
+/* Pregled */
+
+* {
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-image: url(slike/pregled.png);
+
+  background-size: cover;
+
+  background-attachment: fixed;
+}
+
+nav {
+  background: #4e72c2;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 15px 30px;
+}
+
+nav div {
+  display: flex;
+
+  gap: 20px;
+}
+
+nav a {
+  width: 100px;
+
+  color: rgb(247, 243, 243);
+
+  background: #3f3d99;
+
+  border-radius: 100px;
+}
+
+.logo img {
+  width: 80px;
+}
+
+main {
+  width: 80%;
+
+  margin: 30px auto;
+}
+
+h2 {
+  color: black;
+
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-top: -750px;
+
+  background: rgb(253, 251, 251);
+
+  border-radius: 15px;
+
+  overflow: hidden;
+}
+
+th {
+  background: black;
+
+  color: white;
+}
+
+th,
+td {
+  padding: 15px;
+
+  text-align: center;
+}
+
+button {
+  background: #1da1ff;
+  color: white;
+
+  border: none;
+
+  padding: 10px 20px;
+
+  border-radius: 8px;
+
+  background: #3f3d99;
+
+  cursor: pointer;
+}
+.navbtn {
+  background: #1da1ff;
+
+  color: rgb(10, 10, 10);
+
+  border: none;
+
+  padding: 10px 20px;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  cursor: pointer;
+}
