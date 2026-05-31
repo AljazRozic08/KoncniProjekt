@@ -1,14 +1,23 @@
 <?php
-    session_start();
     include 'conn.php';
+    session_start();
     $id=$_SESSION['id'];
-    $sql= "SELECT cas_treninga,datum,opis FROM trening 
-          WHERE Uporabnik_id=$id";
+    $sql= "SELECT id,cas_treninga,datum,opis FROM trening 
+          WHERE uporabnik_id=$id";
+
+    if (isset($_POST['izbrisi'])) {
+    $id_treninga = $_POST['id_treninga'];
+
+    $sql_delete = "DELETE FROM trening WHERE id = '$id_treninga'";
+    mysqli_query($conn, $sql_delete);
+
+    header("Location: pregled.php");
+}
     $result=mysqli_query($conn,$sql);
 ?>
 
 
-<!DOCTYPE html>
+
 <html lang="sl">
 <head>
 
@@ -33,9 +42,9 @@
         
     </div>
     <div>
-        <a href="pregled.html">Pregled treningov</a>
-        <a href="Nov.html">Nov trening</a>
-        <a href="statistika.html">Statistika treningov</a>
+        <a href="pregled.php">Pregled treningov</a>
+        <a href="nov_trening.php">Nov trening</a>
+        <a href="statistika.php">Statistika treningov</a>
     </div>
 
     
@@ -49,8 +58,8 @@
     
 
     <main>
-    <table boredr="1">
-        <tr><h2>Seznam treningov</h2>
+    <table>
+        <tr>
             <th>datum</th>
             <th>čas treninga</th>
             <th>opis</th>
@@ -69,7 +78,11 @@
                         echo "<td class='navbtn'>" . $row['cas_treninga'] . "</td>";
                         echo "<td class='navbtn'>" . $row['opis'] . "</td>";
                         echo "<td><button type='button'>Uredi trening</button></td>";
-                        echo "<td><button type='button'>Izbriši trening</button></td>";
+                        echo "<td><form method='post' action='pregled.php'>
+                        <input type='hidden' name='id_treninga' value='" . $row['id'] . "'>
+                        <button type='submit' name='izbrisi'>Izbriši trening</button>
+                        </form>
+                        </td>";
                         echo "</tr>";
                     }
             }

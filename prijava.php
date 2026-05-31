@@ -1,6 +1,7 @@
 <?php
     
 	include 'conn.php';
+    session_start();
     if (isset($_POST['email']) && isset($_POST['geslo'])) 
     {
         $email=$_POST['email'];
