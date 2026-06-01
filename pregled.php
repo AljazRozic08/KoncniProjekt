@@ -42,7 +42,6 @@
         
     </div>
     <div>
-        <a href="pregled.php">Pregled treningov</a>
         <a href="nov_trening.php">Nov trening</a>
         <a href="statistika.php">Statistika treningov</a>
     </div>
@@ -77,7 +76,8 @@
                         echo "<td class='navbtn'>" . $row['datum'] . "</td>";
                         echo "<td class='navbtn'>" . $row['cas_treninga'] . "</td>";
                         echo "<td class='navbtn'>" . $row['opis'] . "</td>";
-                        echo "<td><button type='button'>Uredi trening</button></td>";
+                        echo "<td><a href='uredi_trening.php?id=".$row['id']."'>
+                        <button type='button'>Uredi trening</button></a></td>";
                         echo "<td><form method='post' action='pregled.php'>
                         <input type='hidden' name='id_treninga' value='" . $row['id'] . "'>
                         <button type='submit' name='izbrisi'>Izbriši trening</button>

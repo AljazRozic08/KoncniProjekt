@@ -47,12 +47,12 @@
     <main>
     <form method="post" enctype="multipart/form-data" action="nov_trening_vnos.php" >
         <h1>Novi trening</h1>
-        <label>Opis</label><textarea name="opis" placeholder="Tukaj opišete trening..." ></textarea><br><br>
+        <label>Opis</label><br><textarea name="opis" placeholder="Tukaj opišete trening..." required ></textarea><br><br>
         <label >Težavnost (med 1 in 5):</label>
-        <input type="number"  name="tezavnost" min="1" max="5">
+        <input type="number"  name="tezavnost" min="1" max="5" required>
         <label>Čas treninga(v minutah)</label
-        ><input type="number" name="cas_treninga" min="1"  />
-        <label>Datum treninga</label><input type="date" name="datum" />
+        ><input type="number" name="cas_treninga" min="1" required />
+        <label>Datum treninga</label><input type="date" name="datum" required />
         <label for="lokacija">Lokacija:</label>
         <select name="lokacija" id="lokacija">
         <option value="">Izberi lokacijo</option>

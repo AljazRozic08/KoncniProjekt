@@ -33,7 +33,7 @@
                     if(mysqli_query($conn,$sql))
                     {
                         echo "Nov trening uspešno dodan";
-                        header("Refresh:5; url=pregled.php");
+                        header("Refresh:3; url=pregled.php");
                     
 
                     }else

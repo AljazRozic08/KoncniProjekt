@@ -88,6 +88,11 @@ main {
 
   margin-bottom: 35px;
 }
+.gost-btn {
+  display: block;
+
+  text-decoration: underline;
+}
 
 .login-register-btn {
   display: inline-block;
@@ -208,10 +213,6 @@ a {
   text-align: center;
 
   margin-top: 10px;
-
-  color: #00a2ff;
-
-  text-decoration: none;
 }
 
 /* Pregled */

@@ -28,11 +28,9 @@
     </div>
 
     
-    
-
 </nav>
 
-    </nav>
+
 
 
     
@@ -56,7 +54,7 @@
             </p>
 
             
-        <div class="nav-buttons">
+        
 
         <a href="prijava.html" class="login-register-btn">
             Prijava
@@ -65,10 +63,11 @@
         <a href="registracija.html" class="login-register-btn">
             Registracija
         </a>
+        <br>
+        <a href="pregled.php" class="gost-btn">
+            Prijavite se kot gost
+        </a>
 
-    </div>
-
-        </div>
 
     </main>
 
