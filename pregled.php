@@ -2,7 +2,7 @@
     include 'conn.php';
     session_start();
     $id=$_SESSION['id'];
-    $sql= "SELECT id,cas_treninga,datum,opis FROM trening 
+    $sql= "SELECT * FROM trening 
           WHERE uporabnik_id=$id";
 
     if (isset($_POST['izbrisi'])) {
@@ -62,8 +62,10 @@
             <th>datum</th>
             <th>čas treninga</th>
             <th>opis</th>
+            <th>slika</th>
             <th>uredi</th>
             <th>izbriši</th>
+
 
         </tr>
 
@@ -76,6 +78,7 @@
                         echo "<td class='navbtn'>" . $row['datum'] . "</td>";
                         echo "<td class='navbtn'>" . $row['cas_treninga'] . "</td>";
                         echo "<td class='navbtn'>" . $row['opis'] . "</td>";
+                        echo '<td><img src="' . $row['slika'] . '" width="50" height="50"></td>';
                         echo "<td><a href='uredi_trening.php?id=".$row['id']."'>
                         <button type='button'>Uredi trening</button></a></td>";
                         echo "<td><form method='post' action='pregled.php'>

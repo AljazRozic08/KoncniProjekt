@@ -96,6 +96,9 @@
     </select>
         <br><br><label for="slika">Slika:</label>
         <input type="file" name="slika" id="slika" accept="image/*">
+        <br>
+        <img id="preview" src="<?php echo $trening['slika']; ?>" alt="Trenutna slika" width="200">
+        <br>
         <button type="submit">Shrani spremembe</button>
 
     
@@ -105,3 +108,17 @@
 
 </body>
 </html>
+<script>
+document.getElementById("slika").addEventListener("change", function () {
+    const file = this.files[0];
+    const preview = document.getElementById("preview");
+
+    if (file) {
+        preview.src = URL.createObjectURL(file);
+        preview.style.display = "block";
+    } else {
+        preview.src = "";
+        preview.style.display = "none";
+    }
+});
+</script>
