@@ -15,10 +15,13 @@
     <link rel="stylesheet" href="stil.css">
 
 </head>
+<style>
+
+</style>
 <body class="index-body">
 
     
-     <nav>
+<nav>
 
     
     <div class="logo">
@@ -35,7 +38,7 @@
 
     
 
-    <main>
+    <main  class="index-main">
 
         <div class="main-box">
 
@@ -70,6 +73,8 @@
 
 
     </main>
+    
+
 
 </body>
 </html>

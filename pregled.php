@@ -44,6 +44,7 @@
     <div>
         <a href="nov_trening.php">Nov trening</a>
         <a href="statistika.php">Statistika treningov</a>
+        <a href="set.php">Set treningov</a>
     </div>
 
     
@@ -56,7 +57,7 @@
 
     
 
-    <main>
+    <main class="pregled-main">
     <table>
         <tr>
             <th>datum</th>

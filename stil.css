@@ -8,8 +8,6 @@
   background-repeat: no-repeat;
 
   background-attachment: fixed;
-
-  min-height: 100vh;
 }
 .logo img {
   height: 70px;
@@ -20,6 +18,8 @@ nav {
 
   height: 80px;
 
+  box-sizing: border-box;
+
   background-color: #4e72c2;
 
   display: flex;
@@ -28,26 +28,18 @@ nav {
 
   align-items: center;
 
-  padding: 0 40px;
+  padding: 40px;
 }
 
 .logo {
   color: white;
-
-  font-size: 24px;
-
-  font-weight: bold;
 }
 
-main {
+.index-main {
   width: 100%;
 
-  height: calc(100vh - 80px);
-
   display: flex;
-
   justify-content: center;
-
   align-items: center;
 
   padding: 30px;
@@ -89,14 +81,10 @@ main {
   margin-bottom: 35px;
 }
 .gost-btn {
-  display: block;
-
   text-decoration: underline;
 }
 
 .login-register-btn {
-  display: inline-block;
-
   padding: 14px 35px;
 
   background-color: rgb(0, 183, 255);
@@ -113,13 +101,11 @@ main {
 
   color: white;
 }
-
+.reg-nasl {
+  color: white;
+}
 /*prijava - Login*/
 * {
-  margin: 0;
-
-  padding: 0;
-
   box-sizing: border-box;
 
   font-family: Arial, sans-serif;
@@ -139,8 +125,6 @@ main {
   background-size: cover;
 
   background-position: center;
-
-  background-attachment: fixed;
 }
 
 .obl {
@@ -180,10 +164,6 @@ input {
 button {
   width: 100%;
 
-  padding: 14px;
-
-  border: none;
-
   border-radius: 10px;
 
   background: #00a2ff;
@@ -212,7 +192,7 @@ a {
 
   text-align: center;
 
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 /* Pregled */
@@ -222,35 +202,13 @@ a {
 
   padding: 0;
 
-  box-sizing: border-box;
-
   font-family: Arial, sans-serif;
 }
 
-body {
+.pregled-body {
   background-image: url(slike/pregled.png);
 
   background-size: cover;
-
-  background-attachment: fixed;
-}
-
-nav {
-  background: #4e72c2;
-
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  padding: 15px 30px;
-}
-
-nav div {
-  display: flex;
-
-  gap: 20px;
 }
 
 nav a {
@@ -267,16 +225,10 @@ nav a {
   width: 80px;
 }
 
-main {
+.pregled-main {
   width: 80%;
 
   margin: 30px auto;
-}
-
-h2 {
-  color: black;
-
-  margin-bottom: 20px;
 }
 
 table {
@@ -284,7 +236,7 @@ table {
 
   border-collapse: collapse;
 
-  margin-top: -750px;
+  margin-top: 20px;
 
   background: rgb(253, 251, 251);
 
@@ -320,18 +272,15 @@ button {
 
   cursor: pointer;
 }
-.navbtn {
-  background: #1da1ff;
 
-  color: rgb(10, 10, 10);
+footer {
+  width: 100%;
 
-  border: none;
+  background: rgb(51, 60, 187);
 
-  padding: 10px 20px;
+  color: white;
 
-  border-radius: 8px;
+  text-align: center;
 
-  background: #ffffff;
-
-  cursor: pointer;
+  padding: 15px;
 }

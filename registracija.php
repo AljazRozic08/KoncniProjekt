@@ -12,7 +12,7 @@
         $datum_rojstva = $_POST['datum_rojstva'];
     
 
-        if ($ime == "" || $priimek == ""|| $email == "" || $geslo == "" || $visina == "" || $teza == "" || $datum_rojstva == "" )
+        if ($ime == "" || $priimek == "" || $email == "" || $geslo == "" || $visina == "" || $teza == ""  || $datum_rojstva == "")
          {
             echo "Izpolni vsa polja.";
             header("Refresh:3; url=registracija.html");
@@ -21,6 +21,7 @@
         }
         else
         {
+            $hashiranoGeslo = password_hash($geslo, PASSWORD_DEFAULT);
             $preveri = "SELECT * FROM uporabnik WHERE email='$email';";
             $result = mysqli_query($conn,$preveri);
             if(mysqli_num_rows($result)>0)
@@ -34,12 +35,12 @@
                 else
                 {
                     $sql = "INSERT INTO uporabnik( ime, priimek, email, geslo, datum_roj, visina, teza) 
-                            VALUES ('$ime','$priimek','$email','$geslo','$datum_rojstva','$visina','$teza')";
+                            VALUES ('$ime','$priimek','$email','$hashiranoGeslo','$datum_rojstva','$visina','$teza')";
                 
                     if(mysqli_query($conn,$sql))
                     {
                         echo "Registracija uspešna";
-                        header("Refresh:3; url=glavna.html");
+                        header("Refresh:3; url=pregled.php");
                     
 
                     }else
