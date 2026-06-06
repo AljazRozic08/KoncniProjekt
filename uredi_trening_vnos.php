@@ -1,7 +1,6 @@
 <?php
 
 	include 'conn.php';
-    session_start();
     $id_trening= $_GET['id'];
 
         $opis = $_POST['opis'];

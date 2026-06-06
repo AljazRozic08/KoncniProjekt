@@ -24,26 +24,7 @@
 <body class="pregled-body">
 
     
-<nav>
-
-    
-    <div class="logo">
-
-        <img src="slike/logo.png" alt="Logo">
-        
-    </div>
-    <div>
-        <a href="nov_trening.php">Nov trening</a>
-        <a href="statistika.php">Statistika treningov</a>
-        <a href="set.php">Set treningov</a>
-    </div>
-
-    
-    
-
-</nav>
-
-
+<?php include 'nav.php'; ?>
 
 
     
@@ -53,6 +34,7 @@
         <tr>
             <th>naslov</th>
             <th>opis</th>
+            <th>treniraj</th>
         </tr>
 
         <?php 
@@ -63,6 +45,8 @@
                         echo "<tr>";
                         echo "<td class='navbtn'>" . $row['naslov'] . "</td>";
                         echo "<td class='navbtn'>" . $row['opis'] . "</td>";
+                        echo "<td><a href='vaja.php?id=".$row['id']."&vaja=0'>
+                        <button type='button'>treniraj</button></a></td>";
                         echo "</tr>";
                     }
             }

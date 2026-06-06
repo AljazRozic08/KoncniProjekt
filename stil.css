@@ -31,6 +31,24 @@ nav {
   padding: 40px;
 }
 
+nav a {
+  width: 100px;
+
+  color: rgb(247, 243, 243);
+
+  background: #3f3d99;
+
+  border-radius: 100px;
+
+  text-decoration: none;
+}
+
+nav div {
+  display: flex;
+
+  align-items: center;
+}
+
 .logo {
   color: white;
 }
@@ -211,16 +229,6 @@ a {
   background-size: cover;
 }
 
-nav a {
-  width: 100px;
-
-  color: rgb(247, 243, 243);
-
-  background: #3f3d99;
-
-  border-radius: 100px;
-}
-
 .logo img {
   width: 80px;
 }
@@ -283,4 +291,127 @@ footer {
   text-align: center;
 
   padding: 15px;
+}
+
+/* Vaja */
+.vaja-body {
+  background: linear-gradient(135deg, #1b2d7a, #4e72c2, #00a2ff);
+
+  padding: 30px;
+
+  text-align: center;
+}
+
+.vaja-main {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.vaja-box {
+  width: 600px;
+
+  background: rgba(8, 53, 121, 0.85);
+
+  padding: 40px;
+
+  border-radius: 25px;
+
+  text-align: center;
+}
+
+.vaja-box h1 {
+  color: white;
+
+  font-size: 60px;
+
+  margin-bottom: 20px;
+}
+
+.vaja-box h2 {
+  color: white;
+
+  margin-bottom: 20px;
+}
+
+.vaja-box p {
+  color: white;
+
+  font-size: 18px;
+
+  line-height: 1.5;
+}
+
+.vaja-slika {
+  width: 100%;
+
+  max-width: 350px;
+
+  border-radius: 20px;
+
+  margin-bottom: 25px;
+}
+
+#start-btn {
+  width: 220px;
+
+  padding: 12px;
+
+  margin-bottom: 20px;
+
+  background: #00a2ff;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 12px;
+
+  font-size: 18px;
+}
+
+#start-btn:hover {
+  background: #0077cc;
+}
+
+.set-domov-link {
+  width: 180px;
+
+  margin-top: 0;
+
+  margin-bottom: 20px;
+
+  text-decoration: none;
+}
+
+.set-domov-btn {
+  width: 180px;
+
+  padding: 12px;
+
+  background: #3f3d99;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 12px;
+
+  font-size: 18px;
+}
+
+.set-domov-btn:hover {
+  background: #0077cc;
+}
+
+.vaja-gumbi {
+  margin-top: 25px;
+}
+
+.vaja-gumbi button {
+  margin-top: 10px;
 }

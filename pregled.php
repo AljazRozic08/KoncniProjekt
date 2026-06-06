@@ -1,19 +1,27 @@
 <?php
-    include 'conn.php';
-    session_start();
-    $id=$_SESSION['id'];
-    $sql= "SELECT * FROM trening 
-          WHERE uporabnik_id=$id";
+include 'conn.php';
+session_start();
 
-    if (isset($_POST['izbrisi'])) {
+if (!isset($_SESSION['id'])) {
+    header("Location: prijava.html");
+}
+
+$id = $_SESSION['id'];
+
+if (isset($_POST['izbrisi'])) {
     $id_treninga = $_POST['id_treninga'];
 
-    $sql_delete = "DELETE FROM trening WHERE id = '$id_treninga'";
+    $sql_delete = "DELETE FROM trening 
+                   WHERE id = '$id_treninga' 
+                   AND uporabnik_id = '$id'";
+
     mysqli_query($conn, $sql_delete);
 
     header("Location: pregled.php");
 }
-    $result=mysqli_query($conn,$sql);
+
+$sql = "SELECT * FROM trening WHERE uporabnik_id = '$id'";
+$result = mysqli_query($conn, $sql);
 ?>
 
 
@@ -33,25 +41,7 @@
 <body class="pregled-body">
 
     
-<nav>
-
-    
-    <div class="logo">
-
-        <img src="slike/logo.png" alt="Logo">
-        
-    </div>
-    <div>
-        <a href="nov_trening.php">Nov trening</a>
-        <a href="statistika.php">Statistika treningov</a>
-        <a href="set.php">Set treningov</a>
-    </div>
-
-    
-    
-
-</nav>
-
+<?php include 'nav.php'; ?>
 
 
 

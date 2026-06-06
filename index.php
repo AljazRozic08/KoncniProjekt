@@ -73,8 +73,10 @@
 
 
     </main>
-    
-
+<footer>
+    <a href="w3schools.com"></a>
+</footer>
 
 </body>
+
 </html>

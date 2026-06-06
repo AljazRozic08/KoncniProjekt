@@ -25,24 +25,7 @@
 <body class="pregled-body">
 
     
-<nav>
-
-    
-    <div class="logo">
-
-        <img src="slike/logo.png" alt="Logo">
-        
-    </div>
-    <div>
-        <a href="nov_trening.php">Nov trening</a>
-        <a href="statistika.php">Statistika treningov</a>
-        <a href="set.php">Set treningov</a>
-    </div>
-
-    
-    
-
-</nav>
+<?php include 'nav.php'; ?>
 
 
 

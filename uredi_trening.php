@@ -1,7 +1,6 @@
 <?php
     
 	include 'conn.php';
-    session_start();
     $trening_id= $_GET['id'];
     $sql_lokacije = "SELECT * FROM lokacija";
     $result_lokacije = mysqli_query($conn,$sql_lokacije);
@@ -29,24 +28,7 @@
 <body class="pregled-body">
 
     
-<nav>
-
-    
-    <div class="logo">
-
-        <img src="slike/logo.png" alt="Logo">
-        
-    </div>
-    <div>
-        <a href="nov_trening.php">Nov trening</a>
-        <a href="statistika.php">Statistika treningov</a>
-        <a href="set.php">Set treningov</a>
-    </div>
-
-    
-    
-
-</nav>
+<?php include 'nav.html'; ?>
 
 
 

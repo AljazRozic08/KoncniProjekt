@@ -1,5 +1,6 @@
 <?php
     include 'conn.php';
+    
 
     if (isset($_POST['ime']) && isset($_POST['priimek']) && isset($_POST['email']) && isset($_POST['datum_rojstva']) && isset($_POST['visina']) && isset($_POST['teza']) && isset($_POST['geslo']))
      {
