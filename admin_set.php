@@ -15,6 +15,19 @@ if (!$result) {
     die("Napaka pri SQL: " . mysqli_error($conn));
 }
 
+if (isset($_POST['dodaj'])) {
+
+    $naslov = $_POST['naslov'];
+    $opis = $_POST['opis'];
+
+    $sql_insert_set = "INSERT INTO set_treningov (naslov, opis)
+                   VALUES ('$naslov', '$opis')";
+
+    mysqli_query($conn, $sql_insert_set);
+
+    header("Location: admin_set.php");
+    exit();
+}
 
 if (isset($_POST['izbrisi'])) {
     $set_treningov_id = $_POST['set_treningov_id'];
@@ -56,7 +69,11 @@ if (isset($_POST['izbrisi'])) {
     
 
 <main class="pregled-main">
+
+
+<br><br>
     <table>
+        <h2>Prikaz setov treninga</h2>
         <tr>
             <th>id</th>
             <th>naslov</th>
@@ -75,13 +92,26 @@ if (isset($_POST['izbrisi'])) {
                         echo "<td class='navbtn'>" . $row['opis'] . "</td>";
                         echo "<td><form method='post' action='admin_set.php'>
                         <input type='hidden' name='set_treningov_id' value='" . $row['id'] . "'>
-                        <button type='submit' name='izbrisi'>Izbriši set</button>
+                        <button type='submit' name='izbrisi'>Izbriši</button>
                         </form>";
                         echo "</tr>";
                     }
             }
     ?>
-</table>
+</table><br><br>
+    <h2>Dodaj set treningov</h2><br>
+
+<form method="post" action="admin_set.php">
+    
+    <label>Naslov</label><br>
+    <input type="text" name="naslov" required><br><br>
+
+    <label>Opis</label><br>
+    <textarea name="opis" required></textarea><br><br>
+
+    <button type="submit" name="dodaj">Dodaj set</button>
+
+</form>
     
     </main>
 

@@ -13,7 +13,9 @@ $sql = "SELECT * FROM uporabnik
 $result = mysqli_query($conn, $sql);
 if (!$result) {
     die("Napaka pri SQL: " . mysqli_error($conn));
+    
 }
+
 if (isset($_POST['izbrisi'])) {
     $uporabnik_id = $_POST['uporabnik_id'];
 
@@ -24,6 +26,7 @@ if (isset($_POST['izbrisi'])) {
 
     header("Location: admin_uporabnik.php");
 }
+
 
 ?>
 
@@ -52,6 +55,7 @@ if (isset($_POST['izbrisi'])) {
 
 <main class="pregled-main">
     <table>
+        <h2>Prikaz uporabnikov</h2>
         <tr>
             <th>id</th>
             <th>ime</th>
@@ -60,7 +64,7 @@ if (isset($_POST['izbrisi'])) {
             <th>datum rojstva</th>
             <th>višina</th>
             <th>teža</th>
-            <th>izbriši</th>
+            <th>izbriši uporabnika</th>
         </tr>
 
         <?php 
@@ -78,7 +82,7 @@ if (isset($_POST['izbrisi'])) {
                         echo "<td class='navbtn'>" . $row['teza'] . "</td>";
                         echo "<td><form method='post' action='admin_uporabnik.php'>
                         <input type='hidden' name='uporabnik_id' value='" . $row['id'] . "'>
-                        <button type='submit' name='izbrisi'>Izbriši uporabnika</button>
+                        <button type='submit' name='izbrisi'>Izbriši</button>
                         </form>";
                         echo "</tr>";
                     }
