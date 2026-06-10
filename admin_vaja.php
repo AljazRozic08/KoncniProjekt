@@ -32,6 +32,24 @@ if (isset($_POST['izbrisi'])) {
     header("Location: admin_vaja.php");
 }
 
+if (isset($_POST['dodaj'])) {
+
+    $naslov = $_POST['naslov'];
+    $opis = $_POST['opis'];
+    $ime_slike = $_FILES['slika']['name'];
+    $tmp = $_FILES['slika']['tmp_name'];
+    $pot = "slikeVaj/" . $ime_slike;
+
+    move_uploaded_file($tmp, $pot);
+
+    $sql = "INSERT INTO vaje (naslov, opis, slika)
+            VALUES ('$naslov', '$opis', '$pot')";
+
+    mysqli_query($conn, $sql);
+
+    header("Location: admin_vaja.php");
+}
+
 
 ?>
 
@@ -66,7 +84,6 @@ if (isset($_POST['izbrisi'])) {
             <th>naslov</th>
             <th>opis</th>
             <th>slika</th>
-            <th>čas izvajanja</th>
             <th>Izbriši vajo</th>
         </tr>
 
@@ -76,23 +93,58 @@ if (isset($_POST['izbrisi'])) {
                 while($row=mysqli_fetch_array($result))
                     {
                         echo "<tr>";
-                         echo "<td class='navbtn'>" . $row['id'] . "</td>";
+                        echo "<td class='navbtn'>" . $row['id'] . "</td>";
                         echo "<td class='navbtn'>" . $row['naslov'] . "</td>";
                         echo "<td class='navbtn'>" . $row['opis'] . "</td>";
-                        echo '<td><img src="' . $row['slika'] . '" width="50" height="50"></td>';
-                        echo "<td class='navbtn'>" . $row['cas_izvajanja'] . "</td>";
+                        echo "<td><img src='" . $row['slika'] . "' width='50' height='50'></td>";
                         echo "<td>";
                         echo "<form method='post' action='admin_vaja.php'>";
-                        echo "<input type='hidden' name='set_vaje_id' value='".$row['id']."'>";
+                        echo "<input type='hidden' name='set_vaje_id' value='" . $row['id'] . "'>";
                         echo "<button type='submit' name='izbrisi'>Izbriši</button>";
                         echo "</form>";
                         echo "</td>";
+                        echo "</tr>";
                     }
             }
     ?>
 </table>
-    
-    </main>
+    <br><br><h2>Dodaj vajo</h2>
+    <form method="post" enctype="multipart/form-data" action="admin_vaja.php"  >
 
+    
+    <label>Naslov</label><br>
+    <input type="text" name="naslov" required><br><br>
+
+    <label>Opis</label><br>
+    <textarea name="opis" required></textarea><br><br>
+
+    <label for="slika">Slika</label><br>
+    <input type="file" name="slika" id="slika" accept="image/*" required>
+    <br><br>
+
+    <img id="preview" src="" alt="Predogled slike" width="200" style="display:none;">
+    <br><br>
+
+    <button type="submit" name="dodaj">Dodaj vajo</button>
+
+</form>
+    </main>
+<script>
+document.getElementById("slika").addEventListener("change", function () {
+
+    const file = this.files[0];
+    const preview = document.getElementById("preview");
+
+    if (file) {
+        preview.src = URL.createObjectURL(file);
+        preview.style.display = "block";
+    }
+    else {
+        preview.src = "";
+        preview.style.display = "none";
+    }
+
+});
+</script>
 </body>
 </html>

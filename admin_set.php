@@ -26,7 +26,7 @@ if (isset($_POST['dodaj'])) {
     mysqli_query($conn, $sql_insert_set);
 
     header("Location: admin_set.php");
-    exit();
+  
 }
 
 if (isset($_POST['izbrisi'])) {
@@ -42,7 +42,12 @@ if (isset($_POST['izbrisi'])) {
     
     header("Location: admin_set.php");
 }
+if (isset($_POST['dodaj_izbrisi_vajo'])) {
+    $set_treningov_id = $_POST['set_treningov_id'];
 
+    header("Location: admin_dodaj_izbrisi_vajo.php?set_treningov_id=" . $set_treningov_id);
+
+}
 ?>
 
 
@@ -78,6 +83,7 @@ if (isset($_POST['izbrisi'])) {
             <th>id</th>
             <th>naslov</th>
             <th>opis</th>
+            <th>izbriši/dodaj vaje</th>
             <th>izbriši set</th>
         </tr>
 
@@ -90,6 +96,10 @@ if (isset($_POST['izbrisi'])) {
                          echo "<td class='navbtn'>" . $row['id'] . "</td>";
                         echo "<td class='navbtn'>" . $row['naslov'] . "</td>";
                         echo "<td class='navbtn'>" . $row['opis'] . "</td>";
+                        echo "<td><form method='post' action='admin_set.php'>
+                        <input type='hidden' name='set_treningov_id' value='" . $row['id'] . "'>
+                        <button type='submit' name='dodaj_izbrisi_vajo'>dodaj/izbriši vaje</button>
+                        </form>";
                         echo "<td><form method='post' action='admin_set.php'>
                         <input type='hidden' name='set_treningov_id' value='" . $row['id'] . "'>
                         <button type='submit' name='izbrisi'>Izbriši</button>

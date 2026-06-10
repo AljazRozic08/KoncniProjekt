@@ -37,6 +37,7 @@
 
     <main>
     <form method="post" enctype="multipart/form-data" action="uredi_trening_vnos.php?id=<?php echo $trening_id; ?>">
+        <div id="nov_tr">
         <h1>Novi trening</h1>
         <label>Opis</label><br><textarea name="opis" required><?php echo $trening['opis']; ?> </textarea><br><br>
         <label >Težavnost (med 1 in 5):</label>

@@ -67,14 +67,11 @@
             Registracija
         </a>
         <br>
-        <a href="pregled.php" class="gost-btn">
-            Prijavite se kot gost
-        </a>
 
 
     </main>
 <footer>
-    <a href="w3schools.com"></a>
+    <a href="https://www.w3schools.com/">w3schools.com</a>
 </footer>
 
 </body>

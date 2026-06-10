@@ -20,14 +20,14 @@
         if ($opis == "" || $tezavnost == ""|| $cas_treninga == "" || $lokacija == "" || $vrstatreninga == "")
          {
             echo "Izpolni obvezna polja.";
-            header("Refresh:3; url=nov_treninga.php");
+            header("Refresh:3; url=nov_trening.php");
            
 
         }
         else
         {
                 
-                    $sql = "INSERT INTO trening(datum,  cas_treninga, opis, Uporabnik_id, tezavnost, slika, Lokacija_id, VrstaTreninga_id) 
+                    $sql = "INSERT INTO trening(datum,  čas_treninga, opis, Uporabnik_id, tezavnost, slika, Lokacija_id, VrstaTreninga_id) 
                             VALUES ('$datum','$cas_treninga','$opis','$id','$tezavnost','$pot_slike','$lokacija','$vrstatreninga')";
                 
                     if(mysqli_query($conn,$sql))

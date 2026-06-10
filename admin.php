@@ -18,8 +18,9 @@
     <?php include 'nav.php'; ?>
 <main>
     <a href="admin_set.php">Izbriši/dodaj Set</a>
-    <a href="admin_vaja.php">Izbriši Vajo</a>
+    <a href="admin_vaja.php">Izbriši/dodaj Vajo</a>
     <a href="admin_uporabnik.php">Izbriši Uporabnika</a>
+  
 </main>
 </head>
 <body class="pregled-body">

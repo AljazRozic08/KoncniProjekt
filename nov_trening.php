@@ -34,6 +34,7 @@
 
     <main>
     <form method="post"  action="nov_trening_vnos.php" enctype="multipart/form-data" >
+        <div id="nov_tr">
         <h1>Novi trening</h1>
         <label>Opis</label><br><textarea name="opis" placeholder="Tukaj opišete trening..." required ></textarea><br><br>
         <label >Težavnost (med 1 in 5):</label>
@@ -69,6 +70,7 @@
         <br>
         <img id="preview" src="" alt="Predogled slike" width="200" style="display: none;">
         <br>
+        <div>
         <button type="submit">Oddaj trening</button>
 
     

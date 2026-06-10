@@ -22,16 +22,12 @@ nav {
 
   background-color: #4e72c2;
 
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  padding: 40px;
+  padding: 5px 40px;
 }
 
 nav a {
+  display: inline-block;
+
   width: 100px;
 
   color: rgb(247, 243, 243);
@@ -41,30 +37,48 @@ nav a {
   border-radius: 100px;
 
   text-decoration: none;
+
+  text-align: center;
+
+  padding: 10px 0;
+
+  margin-top: 0;
 }
 
 nav div {
-  display: flex;
+  float: right;
 
-  align-items: center;
+  margin-top: 15px;
 }
 
 .logo {
   color: white;
+
+  float: left;
+
+  margin-top: 0;
+}
+
+nav::after {
+  content: "";
+
+  display: block;
+
+  clear: both;
 }
 
 .index-main {
   width: 100%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 
   padding: 30px;
 }
 
 .main-box {
   max-width: 800px;
+
+  margin: 0 auto;
 
   background-color: #4e72c2;
 
@@ -132,11 +146,7 @@ nav div {
 .prijava-body {
   height: 100vh;
 
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
+  position: relative;
 
   background-image: url("slike/glavno.png");
 
@@ -147,6 +157,14 @@ nav div {
 
 .obl {
   width: 400px;
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
 
   background: rgba(8, 53, 121, 0.75);
 
@@ -214,7 +232,10 @@ a {
 }
 
 /* Pregled */
-
+#nov_tr {
+  padding-left: 3em;
+  padding-right: 3em;
+}
 * {
   margin: 0;
 
@@ -280,17 +301,33 @@ button {
 
   cursor: pointer;
 }
+button a {
+  color: white;
+
+  text-decoration: none;
+}
 
 footer {
   width: 100%;
 
-  background: rgb(51, 60, 187);
-
-  color: white;
+  background-color: #4e72c2;
 
   text-align: center;
 
-  padding: 15px;
+  padding: 10px;
+
+  position: fixed;
+
+  bottom: 0;
+
+  left: 0;
+}
+footer a {
+  float: left;
+
+  color: white;
+
+  text-decoration: none;
 }
 
 /* Vaja */
@@ -305,15 +342,13 @@ footer {
 .vaja-main {
   width: 100%;
 
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
+  text-align: center;
 }
 
 .vaja-box {
   width: 600px;
+
+  margin: 0 auto;
 
   background: rgba(8, 53, 121, 0.85);
 
