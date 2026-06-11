@@ -145,7 +145,7 @@ include 'conn.php';
 
                     if ($trenutna_vaja < $skupaj_vaj - 1) {
                         echo "<a href='vaja.php?id=$set_id&vaja=" . ($trenutna_vaja + 1) . "'>
-                                <button type='button'>Next</button>
+                                <button type='button'>Naprej</button>
                               </a>";
                     } else {
                         echo "<a href='nov_trening.php'>
