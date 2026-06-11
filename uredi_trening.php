@@ -46,7 +46,7 @@
         ><input type="number" name="cas_treninga" value="<?php echo $trening['cas_treninga']; ?>" required >
         <label>Datum treninga</label><input type="date" name="datum" value="<?php echo date('Y-m-d', strtotime($trening['datum'])); ?>" required>
         <label for="lokacija">Lokacija:</label>
-        <select name="lokacija" id="lokacija">
+        <select name="lokacija" id="lokacija" required>
         <option value="">Izberi lokacijo</option>
 
         <?php
