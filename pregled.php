@@ -67,7 +67,7 @@ $result = mysqli_query($conn, $sql);
                     {
                         echo "<tr>";
                         echo "<td class='navbtn'>" . $row['datum'] . "</td>";
-                        echo "<td class='navbtn'>" . $row['čas_treninga'] . "</td>";
+                        echo "<td class='navbtn'>" . $row['cas_treninga'] . "</td>";
                         echo "<td class='navbtn'>" . $row['opis'] . "</td>";
                         echo '<td><img src="' . $row['slika'] . '" width="50" height="50"></td>';
                         echo "<td><a href='uredi_trening.php?id=".$row['id']."'>
